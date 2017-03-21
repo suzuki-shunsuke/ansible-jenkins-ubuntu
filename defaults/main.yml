@@ -1,0 +1,4 @@
+---
+# defaults file for jenkins-ubuntu
+jenkins_jre: openjdk-8-jre
+jenkins_jdk: openjdk-8-jdk
