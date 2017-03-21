@@ -29,9 +29,7 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-  - role: suzuki-shunsuke.jenkins-ubuntu
-    jenkins_use_ppa: yes
-    jenkins_upgrade: no
+  - suzuki-shunsuke.jenkins-ubuntu
 ```
 
 License
