@@ -1,38 +1,35 @@
-jenkins-ubuntu
-================
+# jenkins-ubuntu
 
 [![Build Status](https://travis-ci.org/suzuki-shunsuke/ansible-jenkins-ubuntu.svg?branch=master)](https://travis-ci.org/suzuki-shunsuke/ansible-jenkins-ubuntu)
 
-Install Jenkins on Ubuntu.
+ansible role to install Jenkins on Ubuntu.
 
 https://galaxy.ansible.com/suzuki-shunsuke/jenkins-ubuntu/
 
-Requirements
-------------
+## Requirements
 
 Nothing.
 
-Role Variables
---------------
+## Role Variables
 
-* jenkins_jre: JRE apt package name. The default is "openjdk-8-jre"
-* jenkins_jdk: JDK apt package name. The default is "openjdk-8-jdk"
+name | required | default | description
+--- | --- | --- | ---
+jenkins_jre | no | openjdk-8-jre | JRE apt package name
+jenkins_jdk | no | openjdk-8-jdk | JDK apt package name
 
-Dependencies
-------------
+## Dependencies
 
 Nothing.
 
-Example Playbook
-----------------
+## Example Playbook
 
 ```yaml
 - hosts: servers
   roles:
-  - suzuki-shunsuke.jenkins-ubuntu
+  - role: suzuki-shunsuke.jenkins-ubuntu
+    become: yes
 ```
 
-License
--------
+## License
 
-MIT
+[MIT](LICENSE)

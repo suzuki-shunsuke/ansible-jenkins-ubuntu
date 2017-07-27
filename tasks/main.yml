@@ -5,22 +5,18 @@
     name: "{{ item }}"
     update_cache: yes
     install_recommends: no
-  become: "{{ jenkins_nonroot }}"
   items:
   - "{{ jenkins_jre }}"
   - "{{ jenkins_jdk }}"
 - name: Add APT key
   apt_key:
     url: https://pkg.jenkins.io/debian/jenkins-ci.org.key
-  become: "{{ jenkins_nonroot }}"
 - name: Copy jenkins.list to /etc/apt/sources.list.d/jenkins.list
   copy:
     src: jenkins.list
     dest: /etc/apt/sources.list.d/jenkins.list
-  become: "{{ jenkins_nonroot }}"
 - name: Install Jenkins
   apt: 
     name: jenkins
     update_cache: yes
     install_recommends: no
-  become: "{{ jenkins_nonroot }}"
