@@ -1,4 +1,5 @@
 ---
 - hosts: default
   roles:
-  - ansible-jenkins-ubuntu
+  - role: ansible-jenkins-ubuntu
+    become: yes
